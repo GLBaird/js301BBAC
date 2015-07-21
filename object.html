@@ -1,0 +1,45 @@
+<script type="text/javascript">
+    
+    function Example() {
+        console.log("This:", this);
+        console.log("Arguments: ", arguments);
+    }
+    
+    
+    var a = {
+        a: 1,
+        b: 2,
+        c: true,
+        getKeys: function() {
+            console.log("This:", this);
+            console.log( Object.keys(this) );
+        }
+    }
+    
+    var b = {
+        p: 200,
+        q:true,
+        W: "Mary"
+    }
+    
+    a.getKeys.call(b);
+    
+    Example.apply(b, [1, 2, 3, "bob"]);
+    
+    var ExampleA = Example.bind(b);
+    
+    ExampleA();
+    
+    var ExampleB = Example.bind(b, 1, 2, "bob");
+    
+    ExampleB();
+    
+    ExampleB("Betty", 10, 20, 30);
+    
+</script>
+
+
+
+
+
+

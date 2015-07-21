@@ -1,0 +1,7 @@
+
+
+// typeof
+
+
+typeof "Betty" // string
+
