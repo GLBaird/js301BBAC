@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Moments</title>
+        
+        <meta charset="UTF-8">
+        <meta name="keyworks" content="js, jquery, advanced">
+        <meta name="description" content="Simple web app to show concepts of ADV JS">
+        <meta name="viewport" content="initial-scale=1, user-scalable=no, maximum-scale=1, minimum-scale=1">
+        
+        <link rel="stylesheet" href="css/styles.css">
+        
+    </head>
+    <body>
+        
+        <section id="momentsView" class="transition">
+            <header>
+                <h1>Moments</h1>
+            </header>
+            
+            <ul class="listview">
+                <li><span class="pic" style="background-image: url(http://placehold.it/350x150)"></span>My Moment<span class="date">14/10/2015</span></li>
+                <li><span class="pic" style="background-image: url(http://placehold.it/350x150)"></span>My Moment 2<span class="date">14/10/2015</span></li>
+                <li><span class="pic" style="background-image: url(http://placehold.it/350x150)"></span>My Moment 3<span class="date">14/10/2015</span></li>
+                <li><span class="pic" style="background-image: url(http://placehold.it/350x150)"></span>My Moment 4<span class="date">14/10/2015</span></li>
+                <li><span class="pic" style="background-image: url(http://placehold.it/350x150)"></span>My Moment 5<span class="date">14/10/2015</span></li>
+            </ul>
+            
+        </section>
+        
+        <section id="uploadView" class="hidden transition">
+            <header>
+                <h2>Upload</h2>
+                <button id="uploadButton" class="icon-upload">Upload</button>
+            </header>
+            
+            <form id="uploadForm">
+                
+                <p style="margin-left: 1em">Describe your moment:</p>
+                <input class="block" id="uploadTitle" placeholder="What is your moment?" type="text" autocomplete="off" autocorrect="on" autocapitalize="on" spellcheck="true">
+               
+                <p style="margin: 2em 1em 0 1em;">Choose image to upload:</p>
+                <input class="block" checked="block" id="uploadFile" type="file">
+              
+                <p style="margin-left: 1em">Choose category:</p>
+                <p class="radio-group">
+                    <label><input type="radio" name="momentType" value="Personal" checked> Personal</label>
+                    <label><input type="radio" name="momentType" value="Family"> Family</label>
+                    <label><input type="radio" name="momentType" value="Romantic"> Romantic</label>
+                    <label><input type="radio" name="momentType" value="Friends"> Friends</label>
+                </p>
+                
+                <div id="imagePreview"> </div>
+                
+            </form>
+        </section>
+        
+        <section id="logonView" class="hidden transition">
+            <header>
+                <h2>Logon</h2>
+            </header>
+            
+            <form id="logonForm">
+                
+                <input class="block" type="text" id="username" placeholder="User Name">
+                
+                <input class="block" type="password" id="password" placeholder="Password">
+                    
+                <input class="block hide transition" type="password" id="confirm" placeholder="Confirm password">
+                    
+                <p class="radio-group">
+                    <label><input name="logonType" type="radio" value="logon" checked> Logon</label>
+                    <label><input name="logonType" type="radio" value="new"> Register</label>
+                </p>
+                    
+                <input type="reset" value="Clear">
+                    
+                <input type="submit" value="Logon">
+                
+            </form>
+        </section>
+        
+        
+        <nav>
+            <ul>
+                <li><a href="#" id="moments" class="icon-list">Moments</a></li>
+                <li><a href="#" id="upload" class="icon-upload">Upload</a></li>
+                <li><a href="#" id="logon" class="icon-user">Logon</a></li>
+            </ul>
+        </nav>
+        
+        
+        
+    </body>
+</html>
