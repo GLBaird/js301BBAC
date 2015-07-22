@@ -1,0 +1,226 @@
+body {
+    font-family: HelveticaNeue-Light, HelveticaNeue, Helvetica, Arial, sans-serif;
+    font-size: large;
+    font-weight: lighter;
+    
+    background: #EFEFEF;
+    margin: 0;
+    padding: 0;
+}
+
+header, nav {
+    position: absolute;
+    background: #AAA;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 2;
+}
+
+header {
+    top: 0;
+    box-shadow: 0 2px 4px #444;
+}
+
+nav {
+    bottom: 0;
+}
+
+header h1, header h2 {
+    font-size: 1.3em;
+    font-weight: lighter;
+}
+
+header button {
+    background: none;
+    border: none;
+    color: transparent;
+    font-size: 1em;
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+    top: 1em;
+    right: 1em;
+    z-index: 3;
+    cursor: pointer;
+}
+
+header button:active {
+    background-color: #AAB;
+}
+
+ul.listview, form {
+    position: absolute;
+    top: 3.5em;
+    left: 0;
+    right: 0;
+    bottom: 4.5em;
+    z-index: 1;
+    overflow: auto;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+    padding: 3em 0.5em 0.5em 0.5em;
+    background-position: center 0.8em;
+    background-repeat: no-repeat;
+    background-size: 2em;
+}
+
+ul.listview {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.listview  li {
+    padding: 1em 0.5em;
+    font-size: 1.2em;
+    white-space: nowrap;
+}
+
+ul.listview span.pic {
+    border-radius: 50%;
+    display: inline-block;
+    width: 4em;
+    height: 4em;
+    background-position: center;
+    background-size: cover;
+    vertical-align: middle;
+    margin-right: 1em;
+}
+
+ul.listview span.date {
+    font-style: italic;
+    font-size: 0.8em;
+    float: right;
+    margin-right: 1em;
+    margin-top: 2em;
+}
+
+@media screen and (max-width: 450px) {
+    span.date {
+        display: none;
+    }
+}
+section.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+input.block {
+    display: block;
+    width: 95%;
+    width: calc(100% - 2em);
+    box-sizing: border-box;
+    margin: 1em;
+    font-size: 1em;
+    padding: 0.5em 1em;
+}
+
+input[type='reset'], input[type='submit'] {
+    display: block;
+    border: 1px solid #AAA;
+    background: white;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #444;
+    width: 95%;
+    width: calc(100% - 1em);
+    box-sizing: border-box;
+    padding: 0.5em;
+    margin: 1em 0.5em;
+    cursor: pointer;
+}
+
+input[type='reset']:active, input[type='submit']:active {
+    background: #EFEFFF;
+}
+
+div#imagePreview {
+    position: absolute;
+    top: 18.5em;
+    left: 0;
+    right: 0;
+    bottom: 1.5em;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.radio-group {
+    display: table;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 1em 0;
+    padding: 0 1em;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.radio-group label {
+    display: table-cell;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    background: #DDD;
+    overflow: hidden;
+    padding: 0 0 0.5em 0;
+}
+
+.radio-group label input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-apppearance: none;
+    -o-appearance: none;
+    appearance: none;
+    display: block;
+    width: 100%;
+    height: 1em;
+    margin: 0 0 0.5em 0;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.radio-group label input:checked {
+    background: #444;
+}
+
+.transition {
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+
+.icon-list {
+    background-image: url(../images/List-100.png);
+}
+
+.icon-upload {
+    background-image: url(../images/Upload-100.png);
+}
+
+.icon-user {
+    background-image: url("../images/User Male-100.png");
+}

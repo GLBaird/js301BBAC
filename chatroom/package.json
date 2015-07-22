@@ -1,0 +1,15 @@
+{
+  "name": "ChatRoom",
+  "version": "1.0.0",
+  "description": "Chat Room Example",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Leon Baird",
+  "license": "ISC",
+  "dependencies": {
+    "websocket": "^1.0.19"
+  }
+}

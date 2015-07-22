@@ -58,7 +58,7 @@ for (var i in names) {
     $("#results").append(
         $("<p />")
             .html(names[i])
-            .attr("data=index", i)
+            .attr("data-index", i)
     );
     */
     

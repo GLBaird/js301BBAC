@@ -1,0 +1,63 @@
+<h1>HTTPRequest Example</h1>
+
+<p>Here's the results:</p>
+
+<ul id="results">
+    <li>No results</li>
+</ul>
+
+<p>Click to download:
+    <button id="download">DOWNLOAD JSON</button>
+</p>
+
+<script type="text/javascript">
+    
+    var request;
+    var results = document.getElementById("results");
+    
+    function downloadJSON(e) {
+        
+        request = new XMLHttpRequest();
+        request.onreadystatechange = readyStateChanged;
+        request.open("GET", "data.json");
+        request.send();
+        
+    }
+    
+    
+    function readyStateChanged() {
+        var info = document.createElement("li");
+        info.appendChild(
+            document.createTextNode(
+                "Ready State: "+request.readyState
+                +" Status: "+request.status
+            )
+        );
+        results.appendChild(info);
+        
+        if (request.readyState == 4
+            && (request.status == 200 || request.status == 0)) {
+            
+            var data = JSON.parse(request.responseText);
+            
+            console.log("Data received: "+request.responseText);
+            
+            for (var i=0; i<data.length; i++) {
+                
+                var record = document.createElement("li");
+                record.innerHTML = 
+                    "NAME: "+data[i].username+"<br>"+
+                    "Age: "+data[i].age+"<br>"+
+                    "Pies: "+(data[i].likesPies ? "YES" : "NO");
+                
+                results.appendChild(record);
+                
+            }
+            
+        }
+        
+    }
+    
+    document.getElementById("download").addEventListener("click", downloadJSON);
+    
+</script>

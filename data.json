@@ -1,0 +1,17 @@
+[
+    {
+        "username" : "Leon Baird",
+        "age" : 39,
+        "likesPies": true
+    },
+    {
+        "username" : "Betty Boop",
+        "age" : 2000,
+        "likesPies": false
+    },
+    {
+        "username" : "Side show Bob",
+        "age" : 40,
+        "likesPies": true
+    }
+]

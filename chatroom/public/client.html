@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Chat Client</title>
+    <style type="text/css">
+        body {
+            font-family: HelveticaNeue-Light, HelveticaNeue, Helvetica, Arial, sans-serif;
+            font-size: large;
+            background: #EFEFEF;
+            margin: 2em 5%;
+            color: #444;
+        }
+
+        div {
+            border: 1px solid #444499;
+            padding: 1em;
+            width: 500px;
+            height: 500px;
+            overflow: auto;
+            background: white;
+        }
+
+        pre {
+            margin: 0;
+            white-space: pre-wrap;
+            font-family: HelveticaNeue-Light, HelveticaNeue, Helvetica, Arial, sans-serif;
+            font-size: 1em;
+            line-height: 2em;
+        }
+
+        input[type='text'], select {
+            border: 1px #444 solid;
+            padding: 0.3em 1em;
+            border-radius: 5px;
+            width: 25em;
+            font-size: 1em;
+            margin: 0.5em 1em 0.5em 0;
+        }
+
+        input[type='submit'] {
+            font-size: 1em;
+            border: none;
+            background: none;
+            color: #234475;
+        }
+
+        span.client {  color: #485356; float: right; }
+        span.socket {  color: #82313d; clear: right; }
+        span.error  {  color: #FF0000; float: right; }
+
+    </style>
+</head>
+<body>
+
+    <h1>Chat Client</h1>
+    <p>Your identifier: <span id="identifier" style="color: #82313d;"></span></p>
+    <p>
+        <label>
+            Connect To:
+            <select id="clientList" style="width: auto; min-width: 5em;"></select>
+        </label>
+    </p>
+    <form>
+        <p>
+            <label> Enter chat text:<br />
+                <input id="chatText" type="text" />
+            </label>
+            <input type="submit" value="Send">
+        </p>
+    </form>
+    <div class="log">
+        <pre id="textLog"></pre>
+    </div>
+
+    <script type="text/javascript" src="client.js"></script>
+    <script type="text/javascript">
+        app.run();
+    </script>
+</body>
+</html>
