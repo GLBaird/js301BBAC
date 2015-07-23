@@ -20,7 +20,7 @@ $new_name = "uploads/".time()."-".$_FILES["picture"]["name"][0];
 move_uploaded_file($tmp_name, $new_name);
 
 if (file_exists("moments.json")) {
-    $moments = json_decode( file_get_contents("moments.json") );
+    $moments = json_decode( file_get_contents("moments.json"), true );
 } else {
     $moments = array();
 }

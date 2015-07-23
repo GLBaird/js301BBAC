@@ -1,0 +1,18 @@
+CACHE MANIFEST
+# version 1.0
+
+CACHE:
+index.html
+css/styles.css
+images/List-100.png
+images/Upload-100.png
+images/User-Male-100.png
+js/app.js
+lib/jquery-2.1.4.min.js
+lib/jquery-2.1.4.min.map
+
+NETWORK:
+*
+
+FALLBACK:
+uploads/ images/Offline-100.png

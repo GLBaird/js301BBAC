@@ -9,7 +9,7 @@ if (!isset($_POST['type'])
 }
 
 if (file_exists("users.json")) {
-    $users = json_decode (file_get_contents("users.json") );    
+    $users = json_decode (file_get_contents("users.json"), true );
 } else {
     $users = array();
 }
@@ -22,16 +22,16 @@ if ($_POST['type'] == "logon") {
         if ($user['name'] == $_POST['username']
             && $user['password'] == $_POST['password']) {
             $_SESSION['userID'] = $user['userID'];
-            die("valid-user");
+            die("valid-user:".$user['userID']);
         } elseif ($user['name'] == $_POST['username']) {
             die("wrong-password");
         }
         
     }
     
-    die("invalid-user");
+    die("user-invalid");
     
-} elseif ($_POST['type'] == "new") {
+} elseif ($_POST['type'] == "new") {    
     $users[] = array(
         "name" => $_POST['username'],
         "password" => $_POST['password'],

@@ -1,0 +1,12 @@
+Download and install NodeJS
+
+then use command prompt and change directory to this folder:
+(on Mac and PC, type "cd " then drag and drop folder onto prompt)
+
+cd folderpath/Chat\ Room
+
+then enter
+"node server.js"
+
+go to the browser and type:
+"http://localhost:3000"
