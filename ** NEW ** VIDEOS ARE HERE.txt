@@ -1,0 +1,10 @@
+Videos are now here:
+
+01 NodeJS for server and sockets:
+https://www.youtube.com/watch?v=jrIpHS9hxZQ
+
+02 Client side websockets:
+https://www.youtube.com/watch?v=maEVEAY02W8&feature=youtu.be
+
+03 Bug fix and Chat Room:
+https://www.youtube.com/watch?v=OlO1qqe7XWo

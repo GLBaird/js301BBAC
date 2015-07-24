@@ -1,0 +1,37 @@
+<h1>Web socket example</h1>
+
+<p>Enter a message to send:<br>
+<input type="text" id="message" placeholder="Enter message">
+<button id="sendMessage">Send</button></p>
+
+<div id="responses">
+    <p>Responses from server:</p>
+    
+</div>
+
+<script type="text/javascript">
+    function printResponse(msg) {
+        var p = document.createElement("p");
+        p.appendChild(
+            document.createTextNode(msg)
+        );
+        
+        document.getElementById("responses").appendChild(p);
+    }
+    
+    var websocket = new WebSocket("ws://localhost:3000", "echo-protocol");
+    websocket.onopen = function() {
+        printResponse("Socket is open");
+    }
+    
+    websocket.onmessage = function(e) {
+        printResponse("Message received: "+e.data);
+    }
+    
+    function sendMessage(e) {
+        var text = document.getElementById("message").value;
+        websocket.send(text);
+    }
+    
+    document.getElementById("sendMessage").addEventListener("click", sendMessage);
+</script>
